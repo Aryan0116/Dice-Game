@@ -1,0 +1,286 @@
+body{
+	background-color: var(--red); 
+	margin: 0;
+	font-family: 'Coda', cursive;
+}
+
+h1{
+	font-size: 3vw;
+	margin: 0;
+	padding: 3% 0;
+}
+
+h2{
+	font-size: 2vw ;
+	margin: 0;
+	text-align: center;
+}
+
+h3{
+	font-size: 1.5vw;
+	margin: 0;
+	text-align: center;
+}
+
+
+button{
+	display: flex;
+	margin: auto auto;
+}
+
+/* ------------------------- VARIABLES ------------------------------- */
+
+
+:root{
+	--white: #F5F5F5;
+	--red:  #F05454;
+	--grey:  #30475E;
+	--black: #000000;
+}
+
+
+
+/* ------------------------- OVERSCREEN ------------------------------- */
+
+.sec-overscreen{
+	background-color: rgb(0,0,0, 0.7);
+	display: block;
+	min-height: 100vh;
+	min-width: 100vw;
+	position: absolute;
+}
+
+.overscreen-flex-container{
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+.sec-overscreen p{
+	background-color: black;
+	color: var(--white);
+	font-size: 4vw;
+	padding: 2% 3% ;
+}
+
+
+#end-screen{
+	display: none;
+}
+
+/* ------------------------- HEADER ------------------------------- */
+
+#sec-header{
+	width: 100%;
+	min-height: 50vh;
+}
+
+.header-flex-container{
+	align-items: center;
+	background-color: var(--white);
+	border-bottom: 3px solid var(--black);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	min-height: 10vh;
+}
+
+.header-flex-item{	
+	text-align: center;
+	color: var(--black);
+}
+
+
+@media all and (max-width:  700px){
+	.header-flex-container{
+	flex-direction: column;
+	}
+	.header-flex-item{
+		margin: 1% 0;
+	}
+}
+
+
+#btn-newGame:hover, #btn-instructions:hover  {
+	color: var(--red);
+	cursor: pointer;
+}
+
+
+
+/* ---- INSTRUCTIONS ------ */
+
+ul{
+	margin-top: 2%;
+}
+
+li{
+	margin-bottom: 1%;
+}
+
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--white); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--white);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: var(--black);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--grey);
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+
+
+
+/* ------------------------- MAIN ------------------------------- */
+
+.main-flex-container{
+	align-items: stretch;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	min-height: 85vh;
+}
+
+
+
+
+/* ----------- PLAYER ----------- */
+
+.main-flex-player{
+	flex-grow: 3;
+}
+
+.main-player-total-div{
+	margin: 12% 0;
+}
+
+.main-player-current-div{
+	margin: 5% 0 ;
+}
+
+.main-flex-player h2{
+	font-size: 5vw;
+	padding: 5% 0 0 0 ;
+}
+
+.main-flex-player h3{
+	font-size: 2vw;
+	padding-bottom: 3%;
+}
+
+.button-hold{
+	background-color: var(--red);
+	border: 1px solid var(--black);
+	border-radius: 12px;
+	margin-top: 7%;
+	padding: 2% 10%;
+}
+
+.button-hold:hover{
+	background-color: var(--black);
+	color: var(--red);
+}
+
+
+/* ====== Game play CSS Coding ====== */
+
+#player1-div{
+	background-color: none;
+}
+
+#player2-div{
+	background-color: none;
+}
+
+#play1-btn-hold{
+	display: block;
+}
+
+#play2-btn-hold{
+	display: none;
+}
+
+
+
+/* ----------- DIE ----------- */
+
+#main-flex-dice{
+	align-items: center;
+	background-color: var(--grey);
+	display: flex;
+	flex-grow: 2;
+	justify-content: center;
+}
+
+#main-die{
+	text-align: center;
+}
+
+#main-die p {
+	color: var(--black);
+	font-size: 1.5vw ;
+	margin-top: 50%;
+}
+
+#fig-die{
+	height: 100px;
+	border-radius: 17%;
+}
+
+#fig-die:hover{
+	box-shadow: 2px 2px black;
+	cursor: pointer;
+}
+
+
+
+
+/* ------------------------- FOOTER ------------------------------- */
+
+#sec-footer{
+	background-color: var(--black);
+	bottom:0px;
+	position:absolute;
+	min-height: 5vh;
+	width:100%;
+}
+
+.footer-container{
+	text-align: center;
+}
+
+.footer-container p {
+	color: var(--white);
+	font-size: 60%;
+	margin: 1.5vh 0 0 0 ;
+}

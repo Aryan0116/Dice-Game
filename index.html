@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- Add Bootstrap and Stylesheets -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"> 
+
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel = "icon" href = "./resource/dice.png"
+        type = "image/x-icon">
+
+	<title>Dice Game</title>
+
+</head>
+
+
+<body>
+
+	<!--------- OVERSCREEN ------------>
+	<div id="start-screen" class="sec-overscreen">
+		<div class="overscreen-flex-container">
+			<p>Press any button to begin playing</p>
+		</div>
+	</div>
+
+	<div id="end-screen" class="sec-overscreen">
+		<div class="overscreen-flex-container">
+			<p id="end-winner">Player wins!</p>
+			<p>Press any key to play again</p>
+		</div>
+	</div>
+
+
+	<!--------- HEADER ------------>
+
+	<header>
+		<div class="header-flex-container">
+			<div class="header-flex-item">
+				<h2 id="btn-newGame">New Game</h2>					
+			</div>
+			<div class="header-flex-item">
+				<h1>Dice Game</h1>	
+			</div>
+			<div class="header-flex-item">
+				<h3 id="btn-instructions">Instructions</h3>					
+			</div>
+		</div>
+	</header>
+
+	<!-- Instructions Modal -->
+	<div id="myModal" class="modal">
+ 		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h3>HOW TO PLAY</h3>
+			<ul>
+				<li>The aim of this little dice game is to <span style="color:#F05454">reach a score of 50</span>  </li>
+				<li>Player 1 begins by rolling the dice. The value of the roll is added to their holding score. Player 1 continues to roll until they are happy with their holding score. Press the hold button to add this score to their bank.</li>
+				<li>But <span style="color:#F05454">BEWARE</span> rolling a ONE takes your holding score back down to zero. And Player 2 begins their turn.</li>
+				<li>The first player to reach a score of <span style="color:#F05454">50</span> wins the game.</li>
+			</il>
+		</div>
+	</div>
+
+
+	<!--------- MAIN ------------>
+
+	<main id="sec-main">
+		<div class="main-flex-container">
+			
+		
+			<div id="player1-div" class="main-flex-item main-flex-player">
+				<div class="main-player-total-div">
+					<h2>Player 1</h2>
+					<h2 id="play1-score-total" class="score" >0</h2>				
+				</div>
+				<div class="main-player-current-div">
+					<h3>Holding Score</h3>
+					<h3 id="play1-score-hold" class="score" >0</h3>					
+				</div>
+				<button id="play1-btn-hold" class="button-hold">Hold</button>
+			</div>
+			
+
+			<div id="main-flex-dice" class="main-flex-item">
+				<div id="main-die">
+					<img id="fig-die" src="./resource/1.png">
+					<p id="para-active-roller"></p>
+				</div>
+			</div>
+
+			<div id="player2-div" class="main-flex-item main-flex-player">
+				<div class="main-player-total-div">
+					<h2>Player 2</h2>
+					<h2 id="play2-score-total" class="score">0</h2>				
+				</div>
+				<div class="main-player-current-div">
+					<h3>Holding Score</h3>
+					<h3 id="play2-score-hold" class="score" >0</h3>					
+				</div>
+				<button id="play2-btn-hold" class="button-hold">Hold</button>
+			</div>
+		</div>
+	</main>
+
+
+
+	<!--------- FOOTER ------------>
+
+	<footer id="sec-footer">
+		<div class="footer-container">
+			<p>&copy Raeesa Parker 2022</p>	
+		</div>
+	</footer>
+
+
+
+
+
+	<!--------- JAVASCRIPT ------------>
+	<script src="./app.js"></script>
+
+</body>
+
+</html>
